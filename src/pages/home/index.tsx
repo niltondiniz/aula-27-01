@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { Container, MovieList, Movie } from './styles';
 import { API_URL, API_KEY, API_IMAGE } from '../../config/config';
+import { Link } from 'react-router-dom';
 
 
 export default function Home(){
@@ -22,9 +23,9 @@ export default function Home(){
                     movies.map(movie => {
                         return (
                             <Movie>
-                                <a href="#">
+                                <Link to={`/details/${movie.id}`}>
                                     <img src={`${API_IMAGE}${movie.poster_path}`} alt={movie.title} />
-                                </a>
+                                </Link>
                                 <span>{movie.title}</span>
                             </Movie>
                         )
