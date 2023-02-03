@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { Container } from "./style";
 import { API_URL, API_KEY, API_IMAGE } from "../../config/config";
 import { useParams, Link } from "react-router-dom";
+import Cast from "../cast";
 
 export default function Details(){
 
@@ -27,7 +28,8 @@ export default function Details(){
                         <Link to="/"><button>Voltar</button></Link>
                     </div>
                 </div>
-            </div>
+            </div> 
+            <Cast movieId={selectedMovie.id}></Cast>
         </Container>
     )
 }
