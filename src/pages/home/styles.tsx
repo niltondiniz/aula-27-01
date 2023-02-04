@@ -1,9 +1,10 @@
 import styled from "styled-components";
 
-export const Container = styled.div`
+export const Container = styled.div`    
     h1 {
         text-align: center;
         margin: 4rem 0;
+        color: black;
     }
 `
 
@@ -20,8 +21,8 @@ export const Movie = styled.li`
     flex-direction: column;
     align-items: center;
 
-    img {
-        width: 180px;
+    img {        
+        height: 150px;
         border-radius: 1rem;
         margin-bottom: 2rem;
     }

@@ -4,13 +4,13 @@ import { API_IMAGE, API_KEY, API_URL } from "../../config/config";
 import { CastItem, CastList } from "./styles";
 
 
-export default function Cast(props: any){
+export default function Cast(){
 
     const [cast, setCast] = useState<any[]>([])
 
-    const { id } = useParams();
+    const { id } = useParams();    
 
-    console.log(props); 
+    console.log(`${API_URL}/${id}/credits?api_key=${API_KEY}&language=pt-BR&page=1`);
 
     useEffect(() => {
         fetch(`${API_URL}/${id}/credits?api_key=${API_KEY}&language=pt-BR&page=1`)

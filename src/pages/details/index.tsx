@@ -29,7 +29,7 @@ export default function Details(){
                     </div>
                 </div>
             </div> 
-            <Cast movieId={selectedMovie.id}></Cast>
+            <Cast></Cast>
         </Container>
     )
 }
